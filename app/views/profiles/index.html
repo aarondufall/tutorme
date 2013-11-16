@@ -1,5 +1,6 @@
 <ul>
 	<% @profiles.each do |profile| %>
+		<div class="divider"></div>	
 		<li><%= link_to profile.first_name, profile_path(profile) %></li>
 	<% end %>
 </ul>
