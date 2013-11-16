@@ -1,4 +1,5 @@
 class Profile < ActiveRecord::Base
+	belongsTo  :user
 	has_many :educations 
 	has_many :subjects
 
