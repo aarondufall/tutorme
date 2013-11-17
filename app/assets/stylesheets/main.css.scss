@@ -65,7 +65,7 @@ tr:nth-child(even) { background-color:$highlight-gray; }
 
 /*Header & Footer */
 #header {
-  @include pad(2em default);
+  @include pad(1em default);
   @include shift(0);
   float: none;
 
@@ -87,7 +87,7 @@ tr:nth-child(even) { background-color:$highlight-gray; }
   width: 100%;
   float: left;
   max-height: 52px;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   ul li {
   list-style: none;
   padding: 0;
@@ -185,82 +185,39 @@ footer {
 
 }
 
-/* Find A Student */
+/* Home Page */
 
-#search {
-  @include pad(default 0);
-
-  input[type=text] {
-  @include roundcorners(.25em);
-  background: url('/assets/search.png') no-repeat;
-  background-size: 25px 25px;
-  background-position: 1% 43%;
-  padding: .5em 0.5em .6em 2.75em;
-  width: 60%;
-
-  @media screen and (max-width: $tablet-large) {
-      width: 90%;
-    }
-
-  }
-
-  input[type=submit] {
-  margin-left: -10.75em;
-    @media screen and (max-width: $mobile) {
-      font-size: 10px;
-    }
-  }
-
-}
-
-#results, #directory {
-
-  h4 {
-    font-weight: normal;
-    position: relative;
-  }
-
-  h4:before {
-    content: "";
-    display: block;
-    border-top: solid 1px $light-gray;
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-  }
-
-  h4 span {
-    background-color: $white;
-    padding: 0 1em;
-    position: relative;
-    z-index: 5;
-  }
-
-}
-
-#directory {
-  @include pad(default 0);
+#home {
+  position: relative;
+  background-image:url('/assets/tutoring.jpeg');
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  background-color: $black;
+  height: 600px;
   clear: both;
-
-  ul {
-    @include pad(default 0);
-    font-size: 1.5em;
-  }
+  opacity:0.7;
+  // top: -48px;
 }
 
-#results ul{
-  @include column-count(3);
-
-  @media screen and (max-width: $tablet-small) {
-    @include column-count(2);
-  }
+#hero-unit {
+  height: 500px;
+  width: 960px;
+  background-color: #000000;
+  margin-top: auto;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;  
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  opacity:0.8;
+  position: absolute;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
-#results li {
-  line-height: 1.7em;
-}
 
 /* Student Profile */
 
