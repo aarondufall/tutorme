@@ -8,7 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="wrapper">
+	
 	<div id="header">
 		<h1>Tutor Me</h1>
 		<ul>
@@ -23,14 +23,14 @@
 	<div id="navigation">
 		<ul id="nav">
 			<li><%= link_to "Home", root_url, id: request.url == root_url ? 'current' : '' %></li>
+			<li><%= link_to "Browse Tutors", profiles_path, id: request.url == profiles_url ? 'current': '' %>
 			<li><%= link_to "Create Profile", new_user_registration_path, id: request.url == new_user_registration_url ? 'current' : '' %></li>
 		</ul>
 	</div>
 		<div id="content">
 			<%= yield %>
 		</div>
-	</div>
-	
+
 
 </body>
 </html>
