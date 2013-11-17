@@ -1,0 +1,127 @@
+/////////////////////////////////////////////////////////////////////////////// 
+// Base Form Styles
+///////////////////////////////////////////////////////////////////////////////
+
+input {
+  @include roundcorners(5px);
+  margin-bottom:5px;
+  line-height:18px;
+  padding:2px 5px;
+  border:1px solid #CCC;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 1px solid $blue-green;
+  background-color: $highlight-gray;
+  outline: none;
+}
+
+input[type=radio]:focus {
+  background-color: $blue-green;
+}
+
+input[type=radio] {
+  margin: 0 1em 0 .25em;
+}
+
+textarea {
+  @include roundcorners(10px);
+  border: 1px solid $light-blue;
+  display: block;
+  width: 100%;
+}
+
+select {
+  border: 1px solid $dark-gray;
+  background-color: $white;
+  outline: none;
+}
+
+option:hover {
+  background-color: $yellow;
+}
+
+input[type=submit], .button-link {
+  @include button(shiny, $blue-green);
+  color: $white;
+
+  a {
+    text-decoration: none;
+  } 
+}
+
+#form-submit-button {
+  padding: 10px 20px;
+  margin-bottom: 3.75em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  input[type=submit] {
+    font-weight: normal;
+  }
+
+  #form-submit-button {
+    padding: 11px 20px;
+  }
+}
+
+.report-content a {
+  color: $white;
+}
+
+input[type=checkbox] {
+  display: inline;
+  width: auto;
+}
+
+input[type=checkbox].form-checkbox {
+  margin: 1em;
+}
+
+.text-field {
+  width: 50%;
+}
+
+input[type=text].search-input {
+  width: 165px;
+}
+
+// Radio Button Table
+///////////////////////////////////////////////////////////////////////////////
+.radio-table {
+  text-align: center;
+  width: 100%;
+
+  .desc {
+  text-align: left;
+  }
+
+  thead {
+    border-bottom: 1px dotted $light-blue;
+  }
+}
+
+
+// Text Field Grid
+///////////////////////////////////////////////////////////////////////////////
+.two {
+  @include span-columns(6);
+}
+
+.three {
+  @include span-columns(4);
+}
+
+.four {
+  @include span-columns(3);
+}
+
+.text-area-grid input {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.text-area-grid input:last-child {
+  @include omega();
+}

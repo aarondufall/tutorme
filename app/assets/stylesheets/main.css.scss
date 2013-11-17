@@ -281,7 +281,22 @@ footer {
   // box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2); 
 }
 
+/* Columns */
 
+.columns {
+  display: inline-block;
+  width:100%;
+}
+
+.left_col {
+  float:left;
+  margin-right: 20px;
+}
+
+.right_col {
+  width: 70%;  
+  float:right;
+}
 
 
 
