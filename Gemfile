@@ -8,6 +8,8 @@ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bourbon'
+gem 'neat'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -31,6 +33,17 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+group :development, :test do
+	gem 'faker'
+end
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
+gem 'devise', '3.2.1'
+# gem 'protected_attributes'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

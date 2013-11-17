@@ -1,0 +1,453 @@
+// Global
+///////////////////////////////////////////////////////////////////////////////
+
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $white;
+  height: 100%;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type:none;
+  padding: 0;
+}
+
+th { border-bottom: 1px solid $light-gray; }
+tr:nth-child(odd) { background-color: $white; }
+tr:nth-child(even) { background-color:$highlight-gray; }
+
+/* Errors, Colors, Dividers */
+
+.dark-blue, .dark-blue a, .dark-blue a:hover {
+  color: $dark-blue;
+}
+
+.blue, .blue a, .blue a:hover {
+  color: $blue;
+}
+
+.white, .white a, .white a:hover {
+  color: $white;
+}
+
+.divider {
+  border-top: 1px solid $light-gray;
+}
+
+
+// Content Structure
+///////////////////////////////////////////////////////////////////////////////
+
+/* Page Wrapper */
+#wrapper {
+  @include span-columns(10);
+  @include shift(1);
+  background-color: $white;
+  box-shadow: 0px 0px 5px 0px $dark-gray;
+  min-height: 100%;
+  position: relative;
+  margin-top: 35px;
+  @media screen and (max-width: $mobile) {
+    @include span-columns(12);
+    @include shift(0);
+  }
+}
+
+/*Header & Footer */
+#header {
+  @include pad(1em default);
+  @include shift(0);
+  float: none;
+
+  @media screen and (max-width: $tablet-large) {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  h1 {
+    color: $black;
+    letter-spacing: 5px;
+  }
+
+}
+
+#navigation {
+  background: #303030;
+  display: block;
+  width: 100%;
+  float: left;
+  max-height: 52px;
+  margin: 0 0 0 0;
+  ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+  ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding:  14px 25px;
+    // background: url(../images/navigation-divider.png) no-repeat right 50%;
+  }
+}
+
+#current {
+  background: #72b626 !important;
+}
+
+#nav {
+  margin: 0px auto;
+}
+
+footer {
+  @include span-columns(12);
+  @include pad(1.25em default);
+  border-top: 1px solid $light-blue;
+  position: absolute;
+  bottom: 0;
+  height: 4em;
+}
+
+
+#header ul{
+  float: right;
+  margin: .5em 0 0 0;
+  padding: 0;
+  list-style-type:none;
+  display: inline-block;
+
+  @media screen and (max-width: $tablet-large) {
+    margin: 0;
+    text-align: center; 
+    width: 100%;
+  }
+
+
+  li {
+    padding: 0px 5px;
+    display: inline;
+  }
+}
+
+
+/* Body Content */
+#content {
+  @include span-columns(10);
+  @include shift(1);
+  @include pad();
+  border: 0;
+  padding-bottom: 6em;
+}
+
+// Individual Page Styles
+///////////////////////////////////////////////////////////////////////////////
+
+/* Login */
+.welcome-page {
+  @include span-columns(6);
+  @include shift(3);
+  @include pad(2em);
+  background-color: tint($light-blue, 75%);
+
+  @media screen and (max-width: $tablet-large) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+  @media screen and (max-width: $mobile) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+
+  h2 {
+    font-size: 2.25em;
+    font-weight: 400;
+  }
+
+  input[type=email], input[type=password], input[type=text] {
+    width: 100%;
+  }
+
+}
+
+/* Home Page */
+
+#home {
+  position: relative;
+  background-image: url(asset_path('tutoring.jpeg'));
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  background-color: $black;
+  height: 600px;
+  clear: both;
+  opacity:0.7;
+  // top: -48px;
+}
+
+#hero-unit {
+  height: 500px;
+  width: 75%;
+  background-color: #000000;
+  margin-top: auto;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;  
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  opacity:0.8;
+  position: absolute;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+/* Student Profile */
+
+#left_col, #right_col {
+  h3 {
+    font-weight: 400;
+  }
+}
+
+#left_col {
+  @include span-columns(8);
+
+  @media screen and (max-width: $tablet-large) {
+    @include span-columns(6);
+  }
+
+  @media screen and (max-width: $tablet-large) {
+    @include span-columns(12);
+  }
+}
+
+#right_col {
+  @include span-columns(4);
+  @include pad(0 default);
+  @include omega();
+  padding-top: .9%;
+
+  @media screen and (max-width: $tablet-large) {
+    @include span-columns(12);
+    @include pad(0);
+    padding-top: 0;
+    width: 100%;
+  }
+
+  #profile {
+    @include pad(default 0);
+  }
+}
+
+#phases {
+  @include pad(default 0);
+
+  fieldset {
+    @include pad(1.5em);
+    background-color: tint($light-blue, 75%);
+    border: 0;
+  }
+
+  fieldset input, fieldset label {
+    display: block;
+  }
+
+  fieldset select {
+    margin-bottom: 1em;
+    width: 70%;
+
+    @media screen and (max-width: $tablet-small) {
+      width: 90%;
+    }
+  }
+
+  fieldset label {
+    @extend .emphasis;
+    margin-bottom: .5em;
+  }
+
+  fieldset h3 {
+    border-bottom: 1px solid $blue;
+    margin-bottom: .5em;
+    width: 90%;
+  }
+
+}
+
+#report-list {
+  padding: 0;
+  margin: 0;
+}
+
+#top-active {
+  @include roundcorners(3px);
+  margin-left: 8px;
+  margin-right: 4px;
+  margin-bottom: 5px;
+  clear:both;
+}
+
+/* Create a new report */
+
+.nav {
+  margin: 1em 0 2.5em .5em;
+  padding: 0;
+
+  a {
+    color: $dark-blue;
+  }
+}
+
+.nav ul{
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+
+  li {
+    display: inline;
+    line-height: 1.5em;
+  }
+}
+
+.nav li a{
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.form-description {
+  padding: 0;
+}
+
+
+
+#form-fields {
+  li {
+    clear: both;
+    @include pad(default 0);
+  }
+
+  li label {
+    @include pad(.5em 0);
+  }
+
+  li label.checkbox {
+    float: left;
+  }
+
+  li label.grid {
+    display: inline;
+  }
+
+  li:last-child {
+    display: inline;
+    float: left;
+    margin: 1em .25em 0 0;
+    padding: 0;
+  }
+}
+
+#form-fields label {
+  display:block;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Fill out a report for a student */
+
+.info-section {
+  margin-top:30px;
+}
+
+/* See results for an individual report */
+
+.report-details {
+  h2 {
+    font-weight: normal;
+  }
+}
+
+.show-report-question {
+  @include pad(default 0);
+  clear: both;
+  display: inline-block;
+  width: 100%;
+
+  .show-question-header {
+    @include pad(.5em 0);
+  }
+}
+
+.report-sub {
+  @include span-columns(3);
+  @include omega(5n);
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.button-link {
+  clear: both;
+  margin-top: 1em;
+}
+
+/* See all reports a student has filled out */
+.report-list {
+  h4 {
+    font-weight: 400;
+  }
+}
+
+.report-table {
+  margin: 5% 0;
+  width: 100%;
+}
+
+/* See all phases */
+.phase-index div:nth-child(3n+3) {
+  @include omega();
+}
+
+.phase-index div:nth-child(even) {
+  background-color: $highlight-gray;
+}
+
+.phase-index-phase {
+  @include span-columns(4);
+  @include pad (default .5em);
+
+  @media screen and (max-width: $tablet-large) {
+   @include span-columns(12);
+   @include pad (1.5em .5em);
+  }
+
+  ol {
+    margin: 0;
+    padding: 0 1.5em;
+  }
+}
+
+
+
+
+
