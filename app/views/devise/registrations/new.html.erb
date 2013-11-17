@@ -5,9 +5,14 @@
   
   <% resource.build_profile %>
   <%= f.fields_for :profile do |ff| %>
-  	<%= ff.text_field :first_name %>
-  	<%= ff.text_field :last_name %>
-    <%= ff.bio :bio %>
+    <div><%= ff.label :first_name %><br />
+  	<%= ff.text_field :first_name %></div>
+
+  	<div><%= ff.label :last_name %><br />
+    <%= ff.text_field :last_name %></div>
+    
+    <div><%= ff.label :bio %><br />
+    <%= ff.text_area :bio , rows: 10, cols: 21%></div>
   <% end %>
 
   <div><%= f.label :email %><br />
