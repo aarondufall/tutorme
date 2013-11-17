@@ -195,257 +195,82 @@ footer {
   background-color: $black;
   height: 600px;
   clear: both;
-  opacity:0.7;
-  // top: -48px;
 }
 
-#hero-unit {
-  height: 500px;
-  width: 75%;
-  background-color: #000000;
+#alpha_wrapper {  
+  width: 75%;  
+  height: 500px;  
+  float: left;   
+  position: relative;  
+  color: #fff; 
   margin-top: auto;  
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;  
-  top:0px;
+  top:45px;
   bottom:0px;
-  left:0px;
-  right:0px;
-  opacity:0.8;
-  position: absolute;
+  left:13%;
+  right:0px; 
+}  
+
+#alpha_2 {  
+  background-color: #000000;;  
+  width: 100%;  
+  height: 500px;  
+  filter: alpha(opacity=30);  
+  -moz-opacity: 0.3;  
+  -khtml-opacity: 0.3;  
+  opacity: 0.6;  
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-}
+}  
 
-
-/* Student Profile */
-
-#left_col, #right_col {
-  h3 {
-    font-weight: 400;
-  }
-}
-
-#left_col {
-  @include span-columns(8);
-
-  @media screen and (max-width: $tablet-large) {
-    @include span-columns(6);
-  }
-
-  @media screen and (max-width: $tablet-large) {
-    @include span-columns(12);
-  }
-}
-
-#right_col {
-  @include span-columns(4);
-  @include pad(0 default);
-  @include omega();
-  padding-top: .9%;
-
-  @media screen and (max-width: $tablet-large) {
-    @include span-columns(12);
-    @include pad(0);
-    padding-top: 0;
+#text_holder_2 {  
+    position: absolute;  
+    top: 20px;    
     width: 100%;
+  h1 {
+    font-family: $hero-font-family;  
+    margin-top: 100px;
+    text-align: center;
+    font-size: 4em; 
+    opacity:1;
   }
-
-  #profile {
-    @include pad(default 0);
-  }
-}
-
-#phases {
-  @include pad(default 0);
-
-  fieldset {
-    @include pad(1.5em);
-    background-color: tint($light-blue, 75%);
-    border: 0;
-  }
-
-  fieldset input, fieldset label {
-    display: block;
-  }
-
-  fieldset select {
-    margin-bottom: 1em;
-    width: 70%;
-
-    @media screen and (max-width: $tablet-small) {
-      width: 90%;
-    }
-  }
-
-  fieldset label {
-    @extend .emphasis;
-    margin-bottom: .5em;
-  }
-
-  fieldset h3 {
-    border-bottom: 1px solid $blue;
-    margin-bottom: .5em;
-    width: 90%;
-  }
-
-}
-
-#report-list {
-  padding: 0;
-  margin: 0;
-}
-
-#top-active {
-  @include roundcorners(3px);
-  margin-left: 8px;
-  margin-right: 4px;
-  margin-bottom: 5px;
-  clear:both;
-}
-
-/* Create a new report */
-
-.nav {
-  margin: 1em 0 2.5em .5em;
-  padding: 0;
-
-  a {
-    color: $dark-blue;
-  }
-}
-
-.nav ul{
-  margin: 0;
-  padding: 0;
-  list-style-type:none;
-
-  li {
-    display: inline;
-    line-height: 1.5em;
-  }
-}
-
-.nav li a{
-  padding-left: 5px;
-  padding-right: 5px;
-  font-weight: bold;
-}
-
-.form-description {
-  padding: 0;
-}
-
-
-
-#form-fields {
-  li {
-    clear: both;
-    @include pad(default 0);
-  }
-
-  li label {
-    @include pad(.5em 0);
-  }
-
-  li label.checkbox {
-    float: left;
-  }
-
-  li label.grid {
-    display: inline;
-  }
-
-  li:last-child {
-    display: inline;
-    float: left;
-    margin: 1em .25em 0 0;
-    padding: 0;
-  }
-}
-
-#form-fields label {
-  display:block;
-}
-
-.label {
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-/* Fill out a report for a student */
-
-.info-section {
-  margin-top:30px;
-}
-
-/* See results for an individual report */
-
-.report-details {
   h2 {
-    font-weight: normal;
-  }
-}
-
-.show-report-question {
-  @include pad(default 0);
-  clear: both;
-  display: inline-block;
-  width: 100%;
-
-  .show-question-header {
-    @include pad(.5em 0);
-  }
-}
-
-.report-sub {
-  @include span-columns(3);
-  @include omega(5n);
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-
-.button-link {
-  clear: both;
-  margin-top: 1em;
-}
-
-/* See all reports a student has filled out */
-.report-list {
-  h4 {
-    font-weight: 400;
-  }
-}
-
-.report-table {
-  margin: 5% 0;
-  width: 100%;
-}
-
-/* See all phases */
-.phase-index div:nth-child(3n+3) {
-  @include omega();
-}
-
-.phase-index div:nth-child(even) {
-  background-color: $highlight-gray;
-}
-
-.phase-index-phase {
-  @include span-columns(4);
-  @include pad (default .5em);
-
-  @media screen and (max-width: $tablet-large) {
-   @include span-columns(12);
-   @include pad (1.5em .5em);
+    font-family: $hero-font-family;  
+    font-size: 3em;
+    text-align: center;
   }
 
-  ol {
-    margin: 0;
-    padding: 0 1.5em;
-  }
 }
+
+
+/* Hero */
+
+#hero {
+  position: relative;
+  left:40%;
+  top:100px;
+}
+
+.hero-button-link {
+  padding: 30px 35px;
+  background: #72b626;
+  color: #FFF !important;
+  font-size: 2em;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  // border: solid 1px #20538D;
+  // text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  // -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  // -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  // box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2); 
+}
+
+
 
 
 
