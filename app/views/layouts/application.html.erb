@@ -9,8 +9,8 @@
 </head>
 <body>
 	<div id="header">
+		<%= image_tag('leaf.png', class: 'logo') %>
 		<h1>Tutor Me</h1>
-		<%= image_tag() %>
 		<ul>
 			<% if user_signed_in? %>
 				<li><%= link_to "Signed out", destroy_user_session_path, method: :delete %></li>
