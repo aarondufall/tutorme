@@ -189,7 +189,7 @@ footer {
 
 #home {
   position: relative;
-  background-image:url(<%= asset_path tutoring.jpeg %>);
+  background-image: url('/assets/tutoring.jpeg');
   background-size: 1500px;
   background-repeat: no-repeat;
   background-color: $black;
