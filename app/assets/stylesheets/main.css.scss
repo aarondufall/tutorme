@@ -82,12 +82,12 @@ tr:nth-child(even) { background-color:$highlight-gray; }
 
 .logo {
   height: 35px;
-   -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 
 #navigation {
@@ -239,6 +239,8 @@ footer {
     position: absolute;  
     top: 20px;    
     width: 100%;
+    margin: 0px 0 0 -50px;
+    left: 50px;
   h1 {
     font-family: $hero-font-family;  
     margin-top: 100px;
@@ -259,7 +261,8 @@ footer {
 
 #hero {
   position: relative;
-  left:40%;
+  margin: -150px 0 0 -108px;
+  left: 50%;
   top:100px;
 }
 
