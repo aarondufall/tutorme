@@ -1,0 +1,1 @@
+include CarrierWave::MimeTypesprocess :set_content_type
