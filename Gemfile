@@ -38,6 +38,10 @@ group :development, :test do
 	gem 'faker'
 end
 
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
 gem 'devise', '3.2.1'
 # gem 'protected_attributes'
 
