@@ -5,14 +5,15 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div id="header">
+		<%= image_tag('leaf.png', class: 'logo') %>
 		<h1>Tutor Me</h1>
 		<ul>
 			<% if user_signed_in? %>
-				<li><%= link_to "Signed out", destroy_user_session_path, method: :delete %></li>
+				<li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
 			<% else %>
 				<li><%= link_to "Sign in", new_user_session_path %></li>
 			<% end %>
@@ -23,7 +24,7 @@
 		<ul id="nav">
 			<li><%= link_to "Home", root_url, id: request.url == root_url ? 'current' : '' %></li>
 			<li><%= link_to "Browse Tutors", profiles_path, id: request.url == profiles_url ? 'current': '' %>
-			<li><%= link_to "Create Profile", new_user_registration_path, id: request.url == new_user_registration_url ? 'current' : '' %></li>
+			<li><%= link_to "Become A Tutor", new_user_registration_path, id: request.url == new_user_registration_url ? 'current' : '' %></li>
 		</ul>
 	</div>
 		
