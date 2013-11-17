@@ -43,6 +43,11 @@ group :production, :staging do
 end
 
 gem 'devise', '3.2.1'
+
+gem 'carrierwave'
+
+gem "fog", "~> 1.3.1"
+
 # gem 'protected_attributes'
 
 # Use ActiveModel has_secure_password
