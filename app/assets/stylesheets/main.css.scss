@@ -88,6 +88,13 @@ tr:nth-child(even) { background-color:$highlight-gray; }
   float: left;
   max-height: 52px;
   margin: 0 0 15px 0;
+  ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
   ul li a {
     display: inline-block;
     color: #fff;
@@ -95,7 +102,7 @@ tr:nth-child(even) { background-color:$highlight-gray; }
     font-size: 14px;
     font-weight: bold;
     padding:  14px 25px;
-    background: url(../images/navigation-divider.png) no-repeat right 50%;
+    // background: url(../images/navigation-divider.png) no-repeat right 50%;
   }
 }
 

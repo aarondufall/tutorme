@@ -38,7 +38,8 @@ group :development, :test do
 	gem 'faker'
 end
 
-gem 'devise'
+gem 'devise', '3.2.1'
+# gem 'protected_attributes'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
